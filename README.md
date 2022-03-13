@@ -23,6 +23,8 @@ With the `--icounter` and `--butthurt` the output `dolphine.state` can be modifi
 #### Setting the Mood (Butthurt)
 `python3 dolphin_state.py dolphin.state --butthurt=1337 --out dolphin-new.state`
 
+#### Setting EXP and Mood 
+`python3 dolphin_state.py dolphin.state --icounter=1337 --butthurt=1337 --out dolphin-new.state`
 
 ## Output
 

@@ -11,6 +11,9 @@ parser.add_argument("--butthurt", type=int, nargs='?', help="Overwrite the butth
 args = parser.parse_args()
 
 HEADER_SIZE = 8 
+DolphinAppMAX = 7
+BUTTHURT_MAX = 14
+
 # https://github.com/flipperdevices/flipperzero-firmware/blob/3c77ae2eb88db05e4bc8a51c7a0dbd64943c0f9f/lib/toolbox/saved_struct.c
 def unpack_header(buffer):
     (magic, version, checksum, flags, timestamp) = struct.unpack('BBBBI', buffer[0:HEADER_SIZE])
@@ -23,7 +26,6 @@ def unpack_header(buffer):
     print()
 
  
-DolphinAppMAX = 7 
 # https://github.com/flipperdevices/flipperzero-firmware/blob/3c77ae2eb88db05e4bc8a51c7a0dbd64943c0f9f/applications/dolphin/helpers/dolphin_state.h 
 def unpack_state(buffer):
     (DolphinAppSubGhz, DolphinAppRfid, DolphinAppNfc, DolphinAppIr, DolphinAppIbutton, DolphinAppBadusb, DolphinAppU2f, butthurt_daily_limit) = struct.unpack('BBBBBBBB', buffer[HEADER_SIZE:HEADER_SIZE+8])
@@ -49,6 +51,10 @@ def update_icounter(buffer, value):
     return buffer[:HEADER_SIZE+12] + struct.pack("I", value) + buffer[HEADER_SIZE+16:]
 
 def update_butthurt(buffer, value):
+    if value > BUTTHURT_MAX:
+        print('[+] Flippers butt can only hurt until 14... exiting')
+        exit() 
+        
     print("[+] Updating butthurt to", value)
     return buffer[:HEADER_SIZE+16] + struct.pack("I", value) + buffer[HEADER_SIZE+20:]
 

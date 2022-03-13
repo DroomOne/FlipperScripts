@@ -52,8 +52,9 @@ def update_icounter(buffer, value):
 
 def update_butthurt(buffer, value):
     if value > BUTTHURT_MAX:
-        print('[+] Flippers butt can only hurt until 14... exiting')
-        exit() 
+        print('[-]', value, 'is way to much butthurt for Flipper to handle (Max=14). Try decreasing it.') 
+        print('[-] Skipping update_butthurt')
+        return buffer 
         
     print("[+] Updating butthurt to", value)
     return buffer[:HEADER_SIZE+16] + struct.pack("I", value) + buffer[HEADER_SIZE+20:]

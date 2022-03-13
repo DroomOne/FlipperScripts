@@ -1,4 +1,4 @@
-# read_state.py
+# dolphin_state.py
 
 Reads the `DolphinStoreData` struct from `dolphin.state` files. 
 
@@ -7,7 +7,7 @@ Reads the `DolphinStoreData` struct from `dolphin.state` files.
 
 ### Reading 
 
-`python3 read_state.py <path-to-dolphine.state>`
+`python3 dolphin_state.py <path-to-dolphine.state>`
 
 ### Writing 
 
@@ -18,10 +18,10 @@ Reads the `DolphinStoreData` struct from `dolphin.state` files.
 With the `--icounter` and `--butthurt` the output `dolphine.state` can be modified. The script will automaticly update the checksum for the file. The `--out` parameter must be set. 
 
 #### Setting EXP
-`python3 read_state.py dolphin.state --icounter=1337 --out dolphin-new.state`
+`python3 dolphin_state.py dolphin.state --icounter=1337 --out dolphin-new.state`
 
 #### Setting the Mood (Butthurt)
-`python3 read_state.py dolphin.state --butthurt=1337 --out dolphin-new.state`
+`python3 dolphin_state.py dolphin.state --butthurt=1337 --out dolphin-new.state`
 
 
 ## Output
@@ -59,8 +59,8 @@ With the `--icounter` and `--butthurt` the output `dolphine.state` can be modifi
 ### Help
 
 ```python
-> python3 read_state.py -h 
-usage: read_state.py [-h] file
+> python3 dolphin_state.py -h 
+usage: dolphin_state.py [-h] file
 
 Read the contents of a flipper-zero's dolphin.state
 

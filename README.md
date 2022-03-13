@@ -4,7 +4,6 @@ Reads the `DolphinStoreData` struct from `dolphin.state` files.
 
 ## Usage
 
-
 ### Reading 
 
 `python3 dolphin_state.py <path-to-dolphine.state>`
@@ -73,10 +72,17 @@ optional arguments:
   -h, --help  show this help message and exit
 ``` 
 
+#### Reading / Writing the dolphin.state
+
+1. Use the file manager version of the qflipper software for PC. 
+2. Open the `internal flash storage`
+3. Drag and drop the `dolphin.state` file to read/write it to the flipper!
+
+
 ## Credits
 Thanks to the FlipperZero team for developing this awsome product! 
 
-- Lamp (Tarsad) : For the idea, and sharing his `dolphin.state` files. 
+- Lamp (Tarsad) : For the idea, and sharing his `dolphin.state` files. And explaining how one could read/write the `dolphin.state` file. 
 
 ## TODO
 - Write a custom `dolphin.state` file

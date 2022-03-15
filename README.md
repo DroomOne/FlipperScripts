@@ -84,5 +84,3 @@ Thanks to the FlipperZero team for developing this awsome product!
 
 - Lamp (Tarsad) : For the idea, and sharing his `dolphin.state` files. And explaining how one could read/write the `dolphin.state` file. 
 
-## TODO
-- Write a custom `dolphin.state` file

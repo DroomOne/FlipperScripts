@@ -52,7 +52,7 @@ def update_icounter(buffer, value):
 
 def update_butthurt(buffer, value):
     if value > BUTTHURT_MAX:
-        print('[-]', value, 'is way to much butthurt for Flipper to handle (Max=14). Try decreasing it.') 
+        print('[-]', value, 'is way too much butthurt for Flipper to handle (Max=14). Try decreasing it.') 
         print('[-] Skipping update_butthurt')
         return buffer 
         

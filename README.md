@@ -6,7 +6,7 @@ Reads the `DolphinStoreData` struct from `dolphin.state` files.
 
 ### Reading 
 
-`python3 dolphin_state.py <path-to-dolphine.state>`
+`python3 dolphin_state.py <path-to-dolphin.state>`
 
 ### Writing 
 
@@ -14,7 +14,7 @@ Reads the `DolphinStoreData` struct from `dolphin.state` files.
 
 **butthurt**: Level of happiness flipper has - `BUTTHURT_MAX = 14`
 
-With the `--icounter` and `--butthurt` the output `dolphine.state` can be modified. The script will automaticly update the checksum for the file. The `--out` parameter must be set. 
+With the `--icounter` and `--butthurt` the output `dolphin.state` can be modified. The script will automaticly update the checksum for the file. The `--out` parameter must be set. 
 
 #### Setting EXP
 `python3 dolphin_state.py dolphin.state --icounter=1337 --out dolphin-new.state`

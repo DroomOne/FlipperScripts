@@ -88,10 +88,10 @@ with open(args.file, 'rb') as reader:
 
 print("[+] Read", len(buffer), "bytes from", args.file)
 
-if args.icounter:
+if args.icounter is not None:
     buffer = update_icounter(buffer, args.icounter)
 
-if args.butthurt:
+if args.butthurt is not None:
     buffer = update_butthurt(buffer, args.butthurt)
 
 if args.out: 

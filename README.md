@@ -6,7 +6,7 @@ Reads the `DolphinStoreData` struct from `dolphin.state` files.
 
 ### Reading 
 
-`python3 dolphin_state.py <path-to-dolphine.state>`
+`python3 dolphin_state.py <path-to-dolphin.state>`
 
 ### Writing 
 
@@ -14,7 +14,7 @@ Reads the `DolphinStoreData` struct from `dolphin.state` files.
 
 **butthurt**: Level of happiness flipper has - `BUTTHURT_MAX = 14`
 
-With the `--icounter` and `--butthurt` the output `dolphine.state` can be modified. The script will automaticly update the checksum for the file. The `--out` parameter must be set. 
+With the `--icounter` and `--butthurt` the output `dolphin.state` can be modified. The script will automaticly update the checksum for the file. The `--out` parameter must be set. 
 
 #### Setting EXP
 `python3 dolphin_state.py dolphin.state --icounter=1337 --out dolphin-new.state`
@@ -31,29 +31,34 @@ With the `--icounter` and `--butthurt` the output `dolphine.state` can be modifi
 [+] Read 40 bytes from dolphin.state
 [+] Updating icounter to 1337
 [+] Saving dolphin state to new-dolphin.state
-[+] Calculated new checksum: 186
+[+] Calculated new checksum: 161
 [+] Saved output to: new-dolphin.state
 [+] SavedStructHeader
     magic:                       208
     version:                     1
-    checksum:                    186
+    checksum:                    161
     flags:                       0
     timestamp:                   0
 
 [+] DolphinStoreData
-    DolphinAppSubGhz:            0
-    DolphinAppRfid:              0
-    DolphinAppNfc:               6
-    DolphinAppIr:                0
-    DolphinAppIbutton:           0
-    DolphinAppBadusb:            0
-    DolphinAppU2f:               0
-    butthurt_daily_limit:        6
+    DolphinAppSubGhz:		 0
+    DolphinAppRfid:		 20
+    DolphinAppNfc:		 20
+    DolphinAppIr:		 0
+    DolphinAppIbutton:		 0
+    DolphinAppBadusb:		 0
+    DolphinAppU2f:		 2
+    butthurt_daily_limit:	 46
 
-    flags:                       0
-    icounter:                    1337
-    butthurt:                    0
-    timestamp:                   1647147878 (2022-03-13 06:04:38)
+    flags:			 0
+    icounter:			 1337
+    butthurt:			 14
+    timestamp:			 1678561214 (2023-03-11 14:00:14)
+
+[+] Passport
+    level:			 2
+    mood:			 Angry enough to leave
+    percent complete:		 69.13%
 ``` 
 
 

@@ -1,0 +1,7 @@
+colorama==0.4.6
+future==1.0.0
+hexdump==3.3
+iso8601==2.1.0
+PyYAML==6.0.1
+serial==0.0.97
+termcolor==2.4.0
